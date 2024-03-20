@@ -11,8 +11,8 @@
             </p>
         </x-page-card>
 
-        <div class="md:w-4/5 lg:w-3/5 xl:w-2/4 mt-6 flex justify-center mx-auto">
-            <x-page-card>
+        <div class="md:w-4/5 lg:w-3/5 xl:w-2/4 mt-6 flex max-md:flex-col justify-center mx-auto">
+            <x-page-card class="md:mr-2 md:w-2/4 lg:w-2/4 xl:w-2/4 mx-0">
                 <x-slot name="title">
                     About
                 </x-slot>
@@ -20,7 +20,7 @@
                     I'm a 20 year old student at the University of Oslo, I'm studying computer science. I'm currently in my second year, and I'm looking for an internship.
                 </p>
             </x-page-card>
-            <x-page-card>
+            <x-page-card class="md:ml-2 max-md:mt-6 md:w-2/4 lg:w-2/4 xl:w-2/4 mx-0">
                 <x-slot name="title">
                     Skills
                 </x-slot>
@@ -29,5 +29,20 @@
                 </p>
             </x-page-card>
         </div>
+    </div>
+
+
+    <div class="flex flex-col py-12 bg-gradient-to-tr from-orange-700 to-pink-700">
+        <x-page-card>
+            <x-slot name="title">
+                Blogs
+            </x-slot>
+            <p>
+                Just to show you I can actually do backend, I made a blog system. Everyone can make a blog, and everyone can comment on the blogs. You can also like and favorite blogs.
+            </p>
+            <x-link-button route="{{ route('blogs.index') }}">
+                Go to blogs
+            </x-link-button>
+        </x-page-card>
     </div>
 </x-app-layout>
