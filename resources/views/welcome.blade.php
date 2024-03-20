@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="banner"></x-slot>
 
-    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700">
+    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700"> <!-- WELCOME, ABOUT, SKILLS -->
         <x-page-card>
             <x-slot name="title">
                 Welcome
@@ -31,8 +31,21 @@
         </div>
     </div>
 
+    <div class="flex flex-col py-12 bg-gradient-to-tr from-orange-700 to-pink-700"> <!-- GITHUB -->
+        <x-page-card>
+            <x-slot name="title">
+                Github
+            </x-slot>
+            <p>
+                If you want to see behind the scenes, you can check out my github. This whole project is online on my Github, and I have a lot of other projects there as well.
+            </p>
+            <x-link-button route="https://github.com/ThePope05" target="_blank">
+                Go to Github
+            </x-link-button>
+        </x-page-card>
+    </div>
 
-    <div class="flex flex-col py-12 bg-gradient-to-tr from-orange-700 to-pink-700">
+    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700"> <!-- BLOGS -->
         <x-page-card>
             <x-slot name="title">
                 Blogs
