@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 //Middlewares
 use App\Http\Middleware\Authenticate;
 
+//Controllers
+use App\Http\Controllers\PostController;
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -14,9 +17,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(Authenticate::class)->name('dashboard');
 
-Route::get('/blogs', function () {
-    return view('blogs.index');
-})->name('blogs.index');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
