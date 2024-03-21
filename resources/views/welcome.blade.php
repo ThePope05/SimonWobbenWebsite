@@ -45,16 +45,16 @@
         </x-page-card>
     </div>
 
-    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700"> <!-- BLOGS -->
+    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700"> <!-- POSTS -->
         <x-page-card>
             <x-slot name="title">
-                Blogs
+                Posts
             </x-slot>
             <p>
-                Just to show you I can actually do backend, I made a blog system. Everyone can make a blog, and everyone can comment on the blogs. You can also like and favorite blogs.
+                Just to show you I can actually do backend, I made a post system. Everyone can make posts, and everyone can comment on the posts. You can also react to the posts with a short emote.
             </p>
-            <x-link-button route="{{ route('blogs.index') }}">
-                Go to blogs
+            <x-link-button route="{{ route('posts.index') }}">
+                Go to posts
             </x-link-button>
         </x-page-card>
     </div>
