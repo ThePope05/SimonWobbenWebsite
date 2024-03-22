@@ -21,6 +21,13 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function dashboard(): View
+    {
+        $posts = Auth::user()->posts;
+
+        return view('dashboard', compact('posts'));
+    }
+
     /**
      * Update the user's profile information.
      */

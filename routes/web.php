@@ -1,21 +1,19 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 //Middlewares
 use App\Http\Middleware\Authenticate;
 
 //Controllers
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(Authenticate::class)->name('dashboard');
+Route::get('/dashboard', [ProfileController::class, 'dashboard'])->middleware(Authenticate::class)->name('dashboard');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 

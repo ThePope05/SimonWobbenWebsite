@@ -9,10 +9,17 @@
 
     @foreach ($posts as $post)
     <div class="flex flex-col py-12 odd:bg-gradient-to-br even:bg-gradient-to-tr from-orange-700 to-pink-700"> <!-- POSTS -->
-        <x-page-card>
+        <x-page-card class="relative">
             <x-slot name="title">
                 {{ $post->title }}
             </x-slot>
+            @if ($post->user == auth()->user())
+            <a href="" class="absolute right-6 top-6">
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </a>
+            @endif
             <p>
                 {{ $post->content }}
             </p>
