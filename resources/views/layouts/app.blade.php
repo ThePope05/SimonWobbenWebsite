@@ -20,33 +20,32 @@
     <livewire:styles />
 </head>
 
-<body class="font-sans antialiased">
-    <div class="min-h-screen">
-        @include('layouts.navigation')
+<body class="font-sans antialiased min-h-screen">
+    @include('layouts.navigation')
 
-        <!-- Page Banner -->
-        @if (isset($banner))
-        <header class="flex align-middle justify-center pt-16 bg-gradient-to-tr from-orange-700 to-pink-700">
-            <x-banner-logo class="w-full" color="#1e293b" />
-        </header>
-        @endif
-        <!-- Page Heading -->
-        @if (isset($header))
-        <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
-                {{ $header }}
-            </div>
-        </header>
-        @endif
+    @if (isset($banner))
+    <!-- Page Banner -->
+    <header class="flex align-middle justify-center pt-16 bg-gradient-to-tr from-slate-800 to-slate-900">
+        <x-banner-logo class="w-full" color="#1e293b" />
+    </header>
+    @endif
+
+    @if (isset($header))
+    <!-- Page Heading -->
+    <header class="pt-32 pb-8 bg-slate-800">
+        <h2 class="font-black text-5xl text-gray-600  text-center leading-tight">
+            {{ $header }}
+        </h2>
+    </header>
+    @endif
 
 
-        <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+    <!-- Page Content -->
+    <main>
+        {{ $slot }}
+    </main>
 
-        <livewire:scripts />
-    </div>
+    <livewire:scripts />
 </body>
 
 </html>
