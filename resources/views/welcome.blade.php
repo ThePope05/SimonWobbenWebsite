@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="banner"></x-slot>
 
-    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700"> <!-- WELCOME, ABOUT, SKILLS -->
+    <div class="flex flex-col py-12 bg-gradient-to-br from-slate-800 to-slate-900"> <!-- WELCOME, ABOUT, SKILLS -->
         <x-page-card>
             <x-slot name="title">
                 Welcome
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col py-12 bg-gradient-to-tr from-orange-700 to-pink-700"> <!-- GITHUB -->
+    <div class="flex flex-col py-12 bg-gradient-to-tr from-slate-800 to-slate-900"> <!-- GITHUB -->
         <x-page-card>
             <x-slot name="title">
                 Github
@@ -45,7 +45,7 @@
         </x-page-card>
     </div>
 
-    <div class="flex flex-col py-12 bg-gradient-to-br from-orange-700 to-pink-700"> <!-- POSTS -->
+    <div class="flex flex-col py-12 bg-gradient-to-br from-slate-800 to-slate-900"> <!-- POSTS -->
         <x-page-card>
             <x-slot name="title">
                 Posts
