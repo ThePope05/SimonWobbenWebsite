@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
 
 class Postcontroller extends Controller
 {
@@ -17,6 +18,13 @@ class Postcontroller extends Controller
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));
+    }
+
+    public function userPosts(User $user)
+    {
+        $posts = User::find($user->id)->posts->sortByDesc('updated_at');
+
+        return view('posts.index', compact('posts'));
     }
 
     public function create()
