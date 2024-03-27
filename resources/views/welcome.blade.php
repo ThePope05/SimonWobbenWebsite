@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="banner"></x-slot>
 
-    <div class="flex flex-col py-12 bg-gradient-to-br from-slate-800 to-slate-900"> <!-- WELCOME, ABOUT, SKILLS -->
+    <x-page-part> <!-- WELCOME, ABOUT, SKILLS -->
         <x-page-card>
             <x-slot name="title">
                 Welcome
@@ -29,23 +29,10 @@
                 </p>
             </x-page-card>
         </div>
-    </div>
+    </x-page-part>
 
-    <div class="flex flex-col py-12 bg-gradient-to-tr from-slate-800 to-slate-900"> <!-- GITHUB -->
-        <x-page-card>
-            <x-slot name="title">
-                Github
-            </x-slot>
-            <p>
-                If you want to see behind the scenes, you can check out my github. This whole project is online on my Github, and I have a lot of other projects there as well.
-            </p>
-            <x-link-button route="https://github.com/ThePope05" target="_blank">
-                Go to Github
-            </x-link-button>
-        </x-page-card>
-    </div>
 
-    <div class="flex flex-col py-12 bg-gradient-to-br from-slate-800 to-slate-900"> <!-- POSTS -->
+    <x-page-part> <!-- POSTS -->
         <x-page-card>
             <x-slot name="title">
                 Posts
@@ -57,5 +44,19 @@
                 Go to posts
             </x-link-button>
         </x-page-card>
-    </div>
+    </x-page-part>
+
+    <x-page-part> <!-- GITHUB -->
+        <x-page-card>
+            <x-slot name="title">
+                Github
+            </x-slot>
+            <p>
+                If you want to see behind the scenes, you can check out my github. This whole project is online on my Github, and I have a lot of other projects there as well.
+            </p>
+            <x-link-button route="https://github.com/ThePope05" target="_blank">
+                Go to Github
+            </x-link-button>
+        </x-page-card>
+    </x-page-part>
 </x-app-layout>
