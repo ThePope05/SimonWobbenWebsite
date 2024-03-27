@@ -16,12 +16,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased bg-gradient-to-tr from-pink-700 to-amber-700">
+<body class="font-sans text-gray-900 antialiased bg-gradient-to-tr from-slate-800 to-slate-900">
     @include('layouts.navigation')
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <div>
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <x-application-logo class="w-20 h-20 fill-current" color="rgb(190 24 93)" />
             </a>
         </div>
 
