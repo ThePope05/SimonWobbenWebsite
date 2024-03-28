@@ -2,7 +2,7 @@
     <x-slot name="header">
         {{ __('Dashboard') }}
     </x-slot>
-
+    @if (count($posts) > 0)
     @foreach ($posts as $post)
     <x-page-part> <!-- POSTS -->
         <x-page-card class="relative">
@@ -20,4 +20,16 @@
         </x-page-card>
     </x-page-part>
     @endforeach
+    @else
+    <x-page-part>
+        <x-page-card>
+            <x-slot name="title">
+                {{ __('No posts found') }}
+            </x-slot>
+            <x-link-button :route="route('posts.create')">
+                {{ __('Create a post') }}
+            </x-link-button>
+        </x-page-card>
+    </x-page-part>
+    @endif
 </x-app-layout>
