@@ -32,7 +32,7 @@
 
     @if (isset($header))
     <!-- Page Heading -->
-    <header class="pt-32 pb-8 bg-slate-800">
+    <header class="pt-32 pb-8 bg-gradient-to-tr from-slate-800 to-slate-900">
         <h2 class="font-black text-5xl text-gray-600  text-center leading-tight">
             {{ $header }}
         </h2>

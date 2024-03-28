@@ -1,7 +1,7 @@
 <div class="flex flex-col w-full">
     <div class="flex flex-row py-4"> <!-- ADD COMMENT -->
         <input type="text" wire:model="comment" class="form-control w-3/4 bg-slate-500 border-none focus:border-pink-700 focus:ring-pink-500 rounded-md shadow-sm text-white font-bold placeholder:text-slate-600" value="{{ $this->comment }}" placeholder="Add a comment">
-        <button wire:click="store" class="btn btn-primary w-1/4 mx-auto w-2/5 block text-center bg-gradient-to-tl from-pink-500 to-pink-700 hover:from-pink-400 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-xl">Add Comment</button>
+        <button wire:click="store" class="btn btn-primary w-1/4 mx-auto block text-center bg-gradient-to-tl from-pink-500 to-pink-700 hover:from-pink-400 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-xl">Add Comment</button>
     </div>
     @foreach ($post->comments->sortByDesc('created_at') as $comment)
     <div class="flex flex-col py-4"> <!-- COMMENTS -->

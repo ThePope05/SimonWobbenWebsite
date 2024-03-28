@@ -4,7 +4,7 @@
     </x-slot>
 
     @foreach ($posts as $post)
-    <div class="flex flex-col py-12 odd:bg-gradient-to-b even:bg-gradient-to-t from-slate-800 to-slate-900"> <!-- POSTS -->
+    <x-page-part> <!-- POSTS -->
         <x-page-card class="relative">
             <x-slot name="title">
                 {{ $post->title }}
@@ -18,6 +18,6 @@
                 </span>
             </div>
         </x-page-card>
-    </div>
+    </x-page-part>
     @endforeach
 </x-app-layout>
