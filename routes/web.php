@@ -15,9 +15,6 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [ProfileController::class, 'dashboard'])->middleware(Authenticate::class)->name('dashboard');
 
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -32,6 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
+
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 
 Route::group([], function () {
     Route::get('/general/no_access_page', function () {
