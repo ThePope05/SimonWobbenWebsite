@@ -15,7 +15,7 @@
         <div class="mt-4">
             <x-input-label for="content" :value="__('Content')" />
 
-            <x-text-input id="content" class="block mt-1 w-full" type="text" name="content" :value="old('content')" required />
+            <x-text-area id="content" class="block mt-1 w-full" name="content" required maxlength="800" rows="15">{{ old('content') }}</x-text-area>
         </div>
 
         <div class="flex items-center justify-end mt-4">

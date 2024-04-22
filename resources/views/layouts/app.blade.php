@@ -20,7 +20,7 @@
     <livewire:styles />
 </head>
 
-<body class="font-sans antialiased min-h-screen">
+<body class="font-sans antialiased">
     @include('layouts.navigation')
 
     @if (isset($banner))

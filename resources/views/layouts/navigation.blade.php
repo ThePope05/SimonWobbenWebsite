@@ -26,12 +26,12 @@
                 <!-- Navigation Links for logged in users -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Your posts') }}
                     </x-nav-link>
                 </div>
                 <!-- New post -->
                 <div class="w-32 flex justify-center items-center ml-12">
-                    <x-link-button :route="route('posts.create')" class="mt-0 h-10 w-full">
+                    <x-link-button :route="route('posts.create')" class="h-10 w-full">
                         {{ __('New Post') }}
                     </x-link-button>
                 </div>

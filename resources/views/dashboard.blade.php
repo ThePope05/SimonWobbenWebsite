@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Dashboard') }}
+        {{ __('Your posts') }}
     </x-slot>
     @if (count($posts) > 0)
     @foreach ($posts as $post)
@@ -21,7 +21,7 @@
     </x-page-part>
     @endforeach
     @else
-    <x-page-part>
+    <x-page-part class="min-h-screen">
         <x-page-card>
             <x-slot name="title">
                 {{ __('No posts found') }}
